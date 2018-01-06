@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css" /><script type="text/javascript">window.onload = function(){var mathElements = document.getElementsByClassName("math");
+  for (var i=0; i < mathElements.length; i++)
+  {
+   var texText = mathElements[i].firstChild
+   katex.render(texText.data, mathElements[i])
+  }}
+  </script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!-- pandoc -s --katex -t html5 -o qsts1md.html qsts1md.md -->
+<h2 id="векторы.-свойства-векторов.">1. Векторы. Свойства векторов.</h2>
+<p><strong>Def</strong> Упорядоченный набор чисел <span class="math inline">(a_1, a_2, ... , a_n)</span> называется (арифметическим) вектором</p>
+<p><strong>Обозначение</strong> <span class="math inline">\vec a = (a_1, a_2, ... , a_n)</span></p>
+<p><strong>Свойства</strong></p>
+<ul>
+<li><p><span class="math inline">\vec a = \vec b ~\Longleftrightarrow~ \forall~a_i, b_i: a_i = b_i</span></p></li>
+<li><p><span class="math inline">\vec a + \vec b = \vec c:\forall~ c_i = a_i+b_i~\Longrightarrow~\vec a + \vec b = \vec b + \vec a</span></p></li>
+<li><p><span class="math inline">\lambda \in R (C):\lambda \vec a = \vec b: \forall~b_i: b_i = \lambda \cdot a_i</span></p></li>
+<li><p><span class="math inline">\lambda \in R (C): \lambda (\vec a + \vec b) = \lambda \vec a + \lambda \vec b</span></p></li>
+</ul>
+<p><strong>Def</strong> <span class="math inline">\vec \emptyset = (0, 0, ..., 0)</span> — нулевой вектор</p>
+<p><strong>Def</strong> <span class="math inline">\vec a&#39;</span> — противоположный вектор для <span class="math inline">\vec a</span></p>
+<p><span class="math inline">\vec a&#39; + \vec a = \vec \emptyset</span></p>
+<p><span class="math inline">\vec a = - \vec a&#39;</span></p>
+<h2 id="линейная-зависимость-системы-векторов.-базис.">2. Линейная зависимость системы векторов. Базис.</h2>
+<p><strong>Def</strong> Линейная комбинация векторов <span class="math inline">\vec a</span> и <span class="math inline">\vec b</span>:</p>
+<p><span class="math inline">\lambda \vec a + \mu \vec b</span>, где <span class="math inline">\lambda, \mu \in C</span></p>
+<p>Если есть множество (система) векторов <span class="math inline">\{\vec a_1, \vec a_2, ... , \vec a_n\} = \{\vec a_i\}_{i=1}^n</span> имеет больше двух элеметов, то линейная комбинация <span class="math inline">\lambda _1 \vec a_1 + \lambda _2 \vec a_2 + ... + \lambda _n \vec a_n = \displaystyle\sum_{i=1}^n \lambda _i \vec a_i</span></p>
+<p><strong>Def</strong> <span class="math inline">\{\vec a_i\}_{i=1}^n~\lambda _i \in C</span></p>
+<ul>
+<li><p>если <span class="math inline">\exists \lambda _i \neq 0</span> и <span class="math inline">\displaystyle\sum_{i=1}^n \lambda _i \vec a_i = \vec \emptyset</span>, то такая система называется линейно зависимой.</p></li>
+<li><p>если <span class="math inline">\displaystyle\sum_{i=1}^n \lambda _i \vec a_i = 0~\Longleftrightarrow~ \forall \lambda _i = 0</span>, то такая система называется линейно независимой.</p></li>
+</ul>
+<p>Любые два компланарных вектора на плоскости составляют линейно зависимую систему. Любые некомпланарные — линейно независимы.</p>
+<h2 id="скалярное-произведение-векторов-и-его-свойства.">3. Скалярное произведение векторов и его свойства.</h2>
+<p><strong>Def</strong> Скалярное произведение векторов <span class="math inline">\vec a</span> и <span class="math inline">\vec b</span> — число (scalar)</p>
+<p><span class="math inline">\vec a \cdot \vec b = a_1 \cdot b_1 + a_2 \cdot b_2 + ... + a_n \cdot b_n = \displaystyle\sum_{i=1}^n a_i b_i</span> (<span class="math inline">\vec a</span> и <span class="math inline">\vec b</span> одной размерности)</p>
+<p><span class="math inline">\vec a \cdot \vec b = |\vec a||\vec b|\cos \varphi</span></p>
+<p><strong>Note</strong> Если вектор умножается на себя, говорят о возведении в квадрат, то есть <span class="math inline">\vec a \cdot \vec a = \vec a ^ 2 = a_1^2 + a_2^2 + ... + a_n^2</span></p>
+<p><strong>Def</strong> Модуль вектора <span class="math inline">|\vec a| = \sqrt{\vec a ^2}</span></p>
+<p><span class="math display">\displaystyle \vec a^0 = \frac{\vec a}{|\vec a|}</span> — единичный вектор (орт)</p>
+<p>Если <span class="math inline">\vec a \cdot \vec b = 0 \Longrightarrow</span> они называются ортогональными</p>
+<p>Можно вычислить угол между прямыми <span class="math display">\displaystyle \cos \varphi = \frac{|\vec a \cdot \vec b|}{|\vec a| \cdot |\vec b|}</span></p>
+<p><strong>Def</strong></p>
+<ul>
+<li><p>Проекция т. <span class="math inline">M</span> на прямую <span class="math inline">l</span> — точка, образованная пересечением <span class="math inline">l</span> и <span class="math inline">\bot</span>-ом к <span class="math inline">l</span> через <span class="math inline">M</span>.</p></li>
+<li><p>Проекция вектора <span class="math display">\displaystyle \vec{AB}</span> на ось <span class="math inline">l</span> — длина вектора <span class="math inline">\vec{A&#39;B&#39;}</span> со знаком <span class="math inline">&quot;+&quot;</span>, если <span class="math inline">\vec{A&#39;B&#39;} \upuparrows \vec l</span> и <span class="math inline">&quot;-&quot;</span> в противном случае.</p></li>
+</ul>
+<p><strong>Def</strong> Проекция <span class="math inline">\vec a</span> на <span class="math inline">\vec b</span> — проекция <span class="math inline">\vec a</span> на ось <span class="math inline">\vec l</span>, <span class="math inline">\vec l \upuparrows \vec b</span></p>
+<p><span class="math inline">|\vec a&#39;| = |\vec a| \cos \alpha</span></p>
+<p><span class="math inline">\vec a&#39;</span> — проекция <span class="math inline">\vec a</span> на <span class="math inline">\vec b</span></p>
+<p>В декартовой записи <span class="math inline">\vec a = a_x \vec i + a_y \vec j + a_z \vec k</span></p>
+<h2 id="векторное-и-смешанное-произведение-векторов.-свойства.">4. Векторное и смешанное произведение векторов. Свойства.</h2>
+<p><span class="math inline">\vec a \times \vec b = \begin{vmatrix} \vec i &amp; \vec j &amp; \vec k \\ a_x &amp; a_y &amp; a_z \\ b_x &amp; b_y &amp; b_z \end{vmatrix}</span> — векторное произведение; результат — вектор.</p>
+<p><strong>Свойства</strong></p>
+<ul>
+<li><p><span class="math inline">\vec a \times \vec a = 0</span></p></li>
+<li><p><span class="math inline">\vec a \times \vec b = - \vec b \times \vec a</span></p></li>
+<li><p><span class="math inline">(\lambda \vec a) \times \vec b = \vec a \times (\lambda \vec b)</span></p></li>
+<li><p><span class="math inline">(\vec a + \vec b) \times \vec c = \vec a \times \vec c + \vec b \times \vec c</span></p></li>
+<li><p>Площадь параллелограмма: <span class="math inline">S = |\vec a \times \vec b|</span></p></li>
+</ul>
+<p>Геометрически векторное произведение определяется через угол:</p>
+<p><strong>Def</strong> <span class="math inline">\vec a \times \vec b = \vec c</span></p>
+<p><span class="math inline">|\vec c| = |\vec a|\cdot|\vec b|\cdot \sin \varphi</span></p>
+<p><span class="math inline">\vec c \bot \vec a</span></p>
+<p><span class="math inline">\vec c \bot \vec b</span></p>
+<p><span class="math inline">\vec a \vec b \vec c = (\vec a \times \vec b) \cdot \vec c</span> — смешанное произведение.</p>
+<p>Объем параллелепипеда: <span class="math inline">V = \pm \vec a \vec b \vec c</span> (<span class="math inline">&quot;+&quot;</span> — если правая тройка, <span class="math inline">&quot;-&quot;</span> — если левая)</p>
+<p>Объем тетраэдра: <span class="math display">\displaystyle V = \pm \frac{1}{6} \vec a \vec b \vec c</span> (<span class="math inline">&quot;+&quot;</span> — если правая тройка, <span class="math inline">&quot;-&quot;</span> — если левая)</p>
+<p><span class="math inline">\vec a \cdot \vec b = 0 \Longleftrightarrow \vec a \bot \vec b</span> (векторы ортогональны)</p>
+<p><span class="math inline">\vec a \times \vec b = 0 \Longleftrightarrow \vec a \parallel \vec b</span> (векторы коллинеарны)</p>
+<p><span class="math inline">\vec a \vec b \vec c = 0 \Longleftrightarrow \vec a,\vec b, \vec c</span> компланарны</p>
+<h2 id="определители-2-го-и-3-го-порядка.-разложение-определителя-по-элементам-строки.">5. Определители 2-го и 3-го порядка. Разложение определителя по элементам строки.</h2>
+<p><strong>Def</strong> Матрица — таблица коэффициентов СЛАУ</p>
+<p><strong>Def</strong> Минор <span class="math inline">M_{ij}</span> — определитель, получаемый из исходного вычеркиванием <span class="math inline">i</span>-ой строки и <span class="math inline">j</span>-го столбца</p>
+<p><span class="math inline">|A| = \begin{vmatrix}  1 &amp; 2 &amp; 3 &amp; 4 \\  5 &amp; 6 &amp; 7 &amp; 8 \\  9 &amp; 10 &amp; 11 &amp; 12 \\  13 &amp; 14 &amp; 15 &amp;16  \end{vmatrix};</span> <span class="math inline">M_{1,3} = \begin{vmatrix}  5 &amp; 6 &amp; 8 \\  9 &amp; 10 &amp; 12 \\  13 &amp; 14 &amp; 16  \end{vmatrix};</span> <span class="math inline">M_{3,2} = \begin{vmatrix}  1 &amp; 3 &amp; 4 \\  5 &amp; 7 &amp; 8 \\  13 &amp; 15 &amp; 16  \end{vmatrix}</span></p>
+<p><strong>Def</strong> Алгебраическое дополнение <span class="math inline">A_{i,j} = (-1)^{i+j} \cdot M_{i,j}</span></p>
+<p><strong>Th</strong> Разложение определителя по элементам строки/столбца:</p>
+<p><span class="math display">\displaystyle det A = \displaystyle\sum_{^{i=const}_{j=1}}^n a_{i,j} \cdot A_{i,j} = \displaystyle\sum_{^{j=const}_{i=1}}^n a_{i,j} \cdot A_{i,j}</span></p>
+<h2 id="свойства-определителей.">6. Свойства определителей.</h2>
+<ul>
+<li><p><span class="math inline">\lambda |A| = |A| \lambda = \begin{vmatrix} \lambda a_{1,1} &amp; \lambda a_{1,2} \\ a_{2,1} &amp; a_{2,2} \end{vmatrix} = \begin{vmatrix} \lambda a_{1,1} &amp; a_{1,2} \\ \lambda a_{2,1} &amp; a_{2,2} \end{vmatrix}</span></p></li>
+<li><p><span class="math inline">|A| = \begin{vmatrix}  a_{1,1} &amp; \cdots &amp; \cdots &amp; \cdots &amp; a_{1,n} \\  \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\  0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\  \cdots &amp; \cdots &amp; \cdots &amp; \cdots &amp; \cdots \\  a_{n,1} &amp; \cdots &amp; \cdots &amp; \cdots &amp; a_{n,n}  \end{vmatrix} = 0</span></p></li>
+<li><p>Любые две строки (столбца) определителя можно сложить, записав результат в одну из них. Значение определителя при этом не изменится.</p></li>
+</ul>
+<p><strong>Note</strong> Сложение проходит по элементам, <span class="math inline">&quot;-&quot;</span> — частный случай <span class="math inline">&quot;+&quot;</span>.</p>
+<p><strong>Доказательство</strong></p>
+<p><span class="math inline">\square~|A| = \begin{vmatrix}  a_{1,1} &amp; a_{1,2} \\  a_{2,1} &amp; a_{2,2}  \end{vmatrix} = \begin{vmatrix}  a_{1,1} + a_{2,1} &amp; a_{1,2} + a_{2,2} \\  a_{2,1} &amp; a_{2,2}  \end{vmatrix} = a_{2,2} (a_{1,1} + a_{2,1}) - a_{2,1} (a_{1,2} + a_{2,2}) = a_{2,2} a_{1,1} + a_{2,2} a_{2,1} - a_{2,1} a_{1,2} - a_{2,1} a_{2,2} = a_{2,2} a_{1,1} - a_{2,1} a_{1,2} = |A|~\blacksquare</span></p>
+<ul>
+<li>Объединяя свойства 1 и 3 получим следующее: если к строке определителя прибавить любую другую строку домноженную на <span class="math inline">\lambda (\lambda \neq 0)</span> значение <span class="math inline">|A|</span> не изменится, то есть:</li>
+</ul>
+<p><span class="math inline">\square~|A| = \begin{vmatrix}  a_{1,1} &amp; a_{1,2} \\  a_{2,1} &amp; a_{2,2}  \end{vmatrix} = \frac{1}{\lambda} \begin{vmatrix}  a_{1,1} &amp; a_{1,2} \\  \lambda a_{2,1} &amp; \lambda a_{2,2}  \end{vmatrix} = \frac{1}{\lambda} \begin{vmatrix} a_{1,1} + \lambda a_{2,1} &amp; a_{1,2} + \lambda a_{2,2} \\ \lambda a_{2,1} &amp; \lambda a_{2,2} \end{vmatrix} = \frac{1}{\lambda} \cdot \lambda \begin{vmatrix} a_{1,1} + \lambda a_{2,1} &amp; a_{1,2} + \lambda a_{2,2} \\ a_{2,1} &amp; a_{2,2} \end{vmatrix} = |A|~\blacksquare</span></p>
+<p><strong>Note</strong> Следствием из предыдущих свойств будет то, что определитель с равными (пропорциональными) строками (столбцами) равен <span class="math inline">&quot;0&quot;</span></p>
+<ul>
+<li><span class="math inline">|A \cdot B| = |A| \cdot |B|</span></li>
+</ul>
+<p><strong>Note</strong> Матрицы, определитель которых равен нулю называются вырожденными матрицами. Еще один особый тип матриц — единичный, их определитель равен <span class="math inline">&quot;1&quot;</span>.</p>
+<h2 id="определители-2-го-и-3-го-порядка.-теорема-крамера.">7. Определители 2-го и 3-го порядка. Теорема Крамера.</h2>
+<p><span class="math inline">\sphericalangle</span> СЛАУ размерности 3:</p>
+<p><span class="math inline">\begin{cases} a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 = b_1 \\ a_{2,1} x_1 + a_{2,2} x_2 + a_{2,3} x_3 = b_2 \\ a_{3,1} x_1 + a_{3,2} x_2 + a_{3,3} x_3 = b_3 \end{cases}~~~~~~~(**)</span></p>
+<p>Введем следующие определители:</p>
+<p><span class="math inline">\Delta = |A|~~~~~~~ \Delta_1 = \begin{vmatrix} b_1 &amp; a_{1,2} &amp; a_{1,3} \\ b_2 &amp; a_{2,2} &amp; a_{2,3} \\ b_3 &amp; a_{3,2} &amp; a_{3,3} \end{vmatrix}~~~~~~~ \Delta_2 = \begin{vmatrix} a_{1,1} &amp; b_1 &amp; a_{1,3} \\ a_{2,1} &amp; b_2 &amp; a_{2,3} \\ a_{3,1} &amp; b_3 &amp; a_{3,3} \end{vmatrix}~~~~~~~ \Delta_3 = \begin{vmatrix} a_{1,1} &amp; a_{1,2} &amp; b_1 \\ a_{2,1} &amp; a_{2,2} &amp; b_2 \\ a_{3,1} &amp; a_{3,2} &amp; b_3 \end{vmatrix}</span></p>
+<p>Для системы другого порядка формула сохраняет свой вид</p>
+<p><strong>Th</strong> Крамера:</p>
+<p><span class="math inline">\Delta \neq 0 \Longleftrightarrow \exists !</span> решение СЛАУ <span class="math inline">(**)</span>, при чем <span class="math display">\displaystyle x_i = \frac{\Delta_i}{\Delta}</span></p>
+<h2 id="системы-координат.-преобразования-сдвига-и-поворота.">8. Системы координат. Преобразования сдвига и поворота.</h2>
+<p><strong>Note</strong> Для организации задания положения точки в пространстве необходимо задать начало отсчета, масштаб и направление, при этом, однозначность достигается если количество чисел, определяющих положение точки равно размерности пространства.</p>
+<ul>
+<li>Декартова система координат (прямоугольная)</li>
+</ul>
+<p><span class="math inline">(x,y)</span> — упорядоченный набор чисел</p>
+<p><span class="math inline">d = \sqrt{(x&#39; - x)^2 + (y&#39; - y)^2}</span> — расстояние между точками</p>
+<ul>
+<li>Полярная система координат (угловая)</li>
+</ul>
+<p><span class="math inline">(\rho, \varphi)</span></p>
+<p><span class="math inline">\varphi \in [0, 2 \pi)</span></p>
+<p>Переход декартова <span class="math inline">\leftrightarrow</span> полярная</p>
+<p><span class="math inline">(x,y) \rightarrow (\rho, \varphi)</span></p>
+<p><span class="math inline">\begin{cases} \rho = \sqrt{x^2 +y^2} \\ \cos \varphi = \frac{x}{\rho} \\ \sin \varphi = \frac{y}{\rho} \end{cases}</span></p>
+<p><span class="math inline">(\rho, \varphi) \rightarrow (x,y)</span></p>
+<p><span class="math inline">\begin{cases} x = \rho \cos \varphi \\ y = \rho \sin \varphi \end{cases}</span></p>
+<h4 id="преобразования-сдвига-и-поворота">Преобразования сдвига и поворота</h4>
+<!-- $Ax^2 + Bxy + Cy^2 +Dx+Ey+F=0$ — исходное -->
+<ul>
+<li>Сдвиг</li>
+</ul>
+<p><span class="math inline">\begin{cases} x = x&#39; + x_0 \\ y = y&#39; + y_0 \end{cases}~~~~~~~</span>будем искать точку <span class="math inline">(x_0, y_0)</span> так, чтобы упростить исходное выражение</p>
+<p>Координаты начала отсчета в новой системе: <span class="math inline">(x_0, y_0)</span> <!--
+$A(x' + x_0)^2 + B(x' + x_0)(y' + y_0) + C(y' + y_0)^2 +D(x' + x_0)+E(y' + y_0)+F=0$
+
+Сгруппируем слагаемые с $x'$ и $y'$ первой степени
+
+При $x'$:
+
+$2Ax_0 + By_0 + D = 0$
+
+При $y'$:
+
+$Bx_0 + 2Cy_0 + E = 0$
+
+$\begin{cases}
+2Ax_0 + By_0 = -D \\
+Bx_0 + 2Cy_0 = -E
+\end{cases}~~~~~~~$задача найти $x_0, y_0$
+--></p>
+<ul>
+<li>Поворот</li>
+</ul>
+<!-- Найдем угол $\alpha$, на который надо повернуть оси координат, чтобы упростить уравнение: -->
+<p>Найдем новые координаты в виде разложения по базису:</p>
+<p><span class="math inline">\begin{cases} x&#39; = X \cos \alpha - Y \sin \alpha \\ y&#39; = X \sin \alpha + Y \cos \alpha \end{cases}</span></p>
+<p><span class="math inline">\begin{cases} X = x&#39; \cos \alpha - y&#39; \sin \alpha \\ Y = x&#39; \sin \alpha + y&#39; \cos \alpha \end{cases}</span></p>
+<!--
+Переобозначим 
+
+$A{x'}^2 +Bx'y'+C{y'}^2 +G = 0$
+
+Подставим
+
+$A(X \cos \alpha - Y \sin \alpha)^2+B(X \cos \alpha - Y \sin \alpha)(X \sin \alpha + Y \cos \alpha)+C(X \sin \alpha + Y \cos \alpha)^2+G = 0$
+
+Выберем $\alpha$ так, чтобы сумма слагаемых с $XY$ $=0$:
+
+$-2A \cos \alpha \sin \alpha - B \sin^2 \alpha + B \cos ^2 \alpha + 2C \cos \alpha \sin \alpha = 0$
+
+$-A \sin 2\alpha + B \cos 2\alpha + C \sin 2\alpha = 0$
+
+$(C-A)\sin 2\alpha + B \cos 2\alpha = 0$
+
+Решая относительно $\alpha$ находим угол поворота, позволяющий свести уравнение к следующему виду (после переобозначения) $\beta X^2 + \gamma Y^2 + \delta = 0$
+-->
+<h2 id="плоскость-и-ее-уравнения.">9. Плоскость и ее уравнения.</h2>
+<p>Уравнения плоскости:</p>
+<ul>
+<li><p>Векторное <span class="math inline">(\vec r - \vec r_0) \vec n = 0</span></p></li>
+<li><p>Через точку <span class="math inline">A(x-x_0) + B(y-y_0) + C(z-z_0) = 0</span></p></li>
+<li><p>Общее <span class="math inline">Ax + By + Cz+ D = 0</span></p></li>
+<li><p>В отрезках [отсекаемых на осях в декартовой системе координат] <span class="math display">\displaystyle \frac{x}{a} + \frac{y}{b} + \frac{z}{c} = 1</span></p></li>
+<li><p>Нормальное <span class="math inline">x \cos \alpha + y \cos \beta + z \cos \gamma - p = 0</span>, где <span class="math display">\displaystyle \mu = \pm \frac{1}{\sqrt{A^2+B^2+C^2}}</span>, выбирается так, чтобы свободный член был с <span class="math inline">&quot;-&quot;</span></p></li>
+</ul>
+<h2 id="прямая-в-пространстве-и-ее-уравнения.">10. Прямая в пространстве и ее уравнения.</h2>
+<p>Уравнения прямой:</p>
+<ul>
+<li><p>Общее <span class="math inline">\begin{cases}  Ax + By + Cz + D = 0 \\  A&#39;x + B&#39;y + C&#39;z + D&#39; = 0  \end{cases}</span></p></li>
+<li><p>Векторное <span class="math inline">\vec r - \vec r_0 = \lambda \vec S</span></p></li>
+<li><p>Каноническое <span class="math display">\displaystyle \frac{x-x_0}{m} = \frac{y-y_0}{n} = \frac{z-z_0}{p}</span></p></li>
+<li><p>Параметрическое <span class="math inline">\begin{cases}  x = x_0 + mt \\  y = y_0 + nt \\  z = z_0 + pt  \end{cases}</span></p></li>
+</ul>
+<h2 id="прямая-на-плоскости-уравнения-через-две-точки-каноническое-параметрическое.">11. Прямая на плоскости: уравнения через две точки, каноническое, параметрическое.</h2>
+<ul>
+<li><p>Через две точки <span class="math display">\displaystyle \frac{x-x_1}{x_1-x_2} = \frac{y-y_1}{y_1-y_2}</span></p></li>
+<li><p>Каноническое <span class="math display">\displaystyle \frac{x-x_0}{m} = \frac{y-y_0}{n}</span></p></li>
+<li><p>Параметрическое<span class="math inline">\begin{cases}  x = x_0 + mt \\  y = y_0 + nt  \end{cases}</span></p></li>
+</ul>
+<h2 id="прямая-на-плоскости-уравнения-каноническое-общее-в-отрезках.">12. Прямая на плоскости: уравнения каноническое, общее, в отрезках.</h2>
+<ul>
+<li><p>Каноническое <span class="math display">\displaystyle \frac{x-x_0}{m} = \frac{y-y_0}{n}</span></p></li>
+<li><p>Общее <span class="math inline">Ax+By+D = 0</span></p></li>
+<li><p>В отрезках [отсекаемых на осях в декартовой системе координат] <span class="math display">\displaystyle \frac{x}{a} + \frac{y}{b} = 1</span></p></li>
+</ul>
+<h2 id="условия-параллельности-и-перпендикулярности-плоскостей-и-прямых-в-пространстве.">13. Условия параллельности и перпендикулярности плоскостей и прямых в пространстве.</h2>
+<ul>
+<li><p>Необходимое и достаточное условие параллельности плоскостей: система <span class="math inline">\begin{cases}  Ax + By + Cz + D = 0 \\  A&#39;x + B&#39;y + C&#39;z + D&#39; = 0  \end{cases}</span> не имеет решений</p></li>
+<li><p>Необходимое и достаточное условие перпендикулярности плоскостей: перпендикулярность их векторов (<span class="math inline">\vec n_1 \times \vec n_2 = 0</span>)</p></li>
+<li><p>Необходимое и достаточное условие параллельности прямых: параллельность направляющих векторов (<span class="math inline">\vec s_1 \cdot \vec s_2 = 0</span>)</p></li>
+<li><p>Необходимое и достаточное условие перпендикулярности прямых: ортогональность направляющих векторов, при этом они лежат в одной плоскости (<span class="math inline">\vec s_1 \times \vec s_2 = 0</span> и <span class="math inline">\vec s_1 \vec s_2 \vec a = 0</span>)</p></li>
+</ul>
+<h2 id="эллипс.-определение-вывод-уравнения-характеристики.">14. Эллипс. Определение, вывод уравнения, характеристики.</h2>
+<p><strong>Def</strong> Эллипс — геометрическое место точек, сумма расстояний от которых до двух данных постоянно.</p>
+<p><strong>Вывод уравнения</strong></p>
+<p><span class="math inline">r_1 + r_2 = const = 2a</span></p>
+<p><span class="math inline">\sqrt{(x-c)^2+y^2} + \sqrt{(x+c)^2+y^2} = 2a ~\vert\uparrow {}^2</span></p>
+<p><span class="math inline">(x-c)^2+y^2 = 4a^2 - 4a\sqrt{(x+c)^2+y^2} + (x+c)^2+y^2</span></p>
+<p><span class="math inline">(x-c)^2 - (x+c)^2 = 4a^2 - 4a \sqrt{(x+c)^2+y^2}</span></p>
+<p><span class="math inline">-4xc = 4a^2 - 4a\sqrt{(x+c)^2+y^2}~\vert :4</span></p>
+<p><span class="math inline">a\sqrt{(x+c)^2+y^2} = a^2+xc~\vert\uparrow {}^2</span></p>
+<p><span class="math inline">a^2(x^2 + 2xc +c^2 + y^2) = a^4 + 2a^2 xc + c^2 x^2</span></p>
+<p><span class="math inline">a^2 x^2 + a^2 c^2 + a^2 y^2 =a^4 + c^2 x^2</span></p>
+<p><span class="math inline">(a^2 - c^2)x^2 + a^2 y^2 = a^2 (a^2 - c^2)</span></p>
+<p><span class="math display">\displaystyle \frac{x^2}{a^2} + \frac{y^2}{a^2 - c^2} = 1</span></p>
+<p><span class="math inline">a^2 - c^2 = b^2</span></p>
+<p><span class="math display">\displaystyle \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</span> — каноническое уравнение эллипса.</p>
+<p><strong>Вывод уравнения эксцентриситета:</strong></p>
+<p><span class="math inline">r_2^2 - r_1^2 =(x+c)^2+y^2 - (x-c)^2+y^2 = 2c \cdot 2x = 4xc</span></p>
+<p><span class="math inline">r_1 + r_2 = 2a</span></p>
+<p><span class="math inline">\begin{cases} r_2 - r_1 = \dfrac{2cx}{a} \\ r_2 + r_1 = 2a \end{cases} \Longleftrightarrow \begin{cases} r_1 = a - \dfrac{c}{a} x \\ r_2 = a + \dfrac{c}{a} x \end{cases}</span></p>
+<p>Обозначим <span class="math inline">\dfrac{c}{a} = \varepsilon</span> — эксцентриситет</p>
+<p><span class="math inline">r_{1,2} = a \pm \varepsilon x</span></p>
+<p><span class="math inline">\varepsilon = \dfrac{\sqrt{a^2 - b^2}}{a} = \sqrt{1 - \dfrac{b^2}{a^2}}</span></p>
+<p><strong>Вывод уравнения директрисы:</strong></p>
+<p>Задача: найти уравнения прямых, таких что <span class="math inline">\dfrac{r_{1,2}}{d} = const</span>, где <span class="math inline">d = \rho(M, line)</span></p>
+<p><span class="math display">\displaystyle r_1: \frac{r_1}{d} = \frac{a - \varepsilon x}{l - x} = \frac{\varepsilon (\frac{a}{\varepsilon} - x)}{l - x} = \varepsilon</span></p>
+<p>Таким образом, одно из уравнений <span class="math inline">x = \dfrac{a}{\varepsilon}</span>, второе — <span class="math inline">x = -\dfrac{a}{\varepsilon}</span></p>
+<p>Таким образом, эксцентриситет — отношение расстояний от любой точки эллипса до фокуса и некоторой прямой (директрисы), для окружности отношение принято <span class="math inline">=0</span>.</p>
+<h2 id="гипербола.-определение-вывод-уравнения-характеристики.">15. Гипербола. Определение, вывод уравнения, характеристики.</h2>
+<p><strong>Def</strong> Гипербола — геометрическое место точки, модуль разности расстояний от которых до двух данных точек постоянен.</p>
+<p><strong>Вывод уравнения</strong></p>
+<p><span class="math inline">|r_2 - r_1| = 2a</span></p>
+<p><span class="math inline">|\sqrt{(x-c)^2+y^2} - \sqrt{(x+c)^2+y^2}| = 2a</span></p>
+<p>Обе части <span class="math inline">\geq 0</span>, так как <span class="math inline">a \geq 0</span></p>
+<p><span class="math inline">\sqrt{(x-c)^2+y^2} - \sqrt{(x+c)^2+y^2} = 2a ~\vert\uparrow {}^2</span></p>
+<p><span class="math inline">(x-c)^2+y^2 = 4a^2 - 4a\sqrt{(x+c)^2+y^2} + (x+c)^2+y^2</span></p>
+<p><span class="math inline">(x-c)^2 - (x+c)^2 = 4a^2 + 4a\sqrt{(x+c)^2+y^2}</span></p>
+<p><span class="math inline">-4xc = 4a^2 + 4a\sqrt{(x+c)^2+y^2}~\vert :4</span></p>
+<p><span class="math inline">a\sqrt{(x+c)^2+y^2} = -a^2-xc~\vert\uparrow {}^2</span></p>
+<p><span class="math inline">a^2(x^2 + 2xc +c^2 + y^2) = a^4 + 2a^2 xc + c^2 x^2</span></p>
+<p><span class="math inline">a^2 x^2 + a^2 c^2 + a^2 y^2 =a^4 + c^2 x^2</span></p>
+<p><span class="math inline">(a^2 - c^2)x^2 + a^2 y^2 = a^2 (a^2 - c^2)</span></p>
+<p><span class="math display">\displaystyle \frac{x^2}{a^2} + \frac{y^2}{a^2 - c^2} = 1</span></p>
+<p><span class="math inline">c^2 - a^2 = b^2</span></p>
+<p><span class="math display">\displaystyle \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1</span> — каноническое уравнение гиперболы.</p>
+<p>Выразим <span class="math inline">y</span>:</p>
+<p><span class="math display">\displaystyle \frac{y^2}{b^2} = \frac{x^2}{a^2} - 1</span></p>
+<p><span class="math display">\displaystyle y = \pm \frac{b}{a} \sqrt{x^2 - a^2}</span></p>
+<p><span class="math display">\displaystyle y = \pm \frac{b}{a} x \sqrt{1 - \frac{a^2}{x^2}}</span></p>
+<p>Если <span class="math inline">x \rightarrow \infty \Longrightarrow \sqrt{1 - \dfrac{a^2}{x^2}} \rightarrow 1 \Longrightarrow y \rightarrow \dfrac{b}{a}x</span></p>
+<p><span class="math display">\displaystyle y = \pm \frac{b}{a}x </span> — уравнение асимптот гиперболы.</p>
+<p><strong>Эксцентриситет</strong></p>
+<p><span class="math display">\displaystyle \varepsilon = \frac{c}{a} &gt; 1</span>, так как <span class="math inline">c &gt; a</span></p>
+<p><strong>Директриса</strong></p>
+<p><span class="math display">\displaystyle x = \pm \frac{a}{\varepsilon}</span></p>
+<h2 id="парабола.-определение-вывод-уравнения-характеристики.">16. Парабола. Определение, вывод уравнения, характеристики.</h2>
+<p><strong>Def</strong> Парабола — геометрическое место точек, равноудаленных от данной точки и данной прямой (точка — фокус, прямая — директриса).</p>
+<p><strong>Вывод уравнения</strong></p>
+<p><span class="math inline">r = d</span></p>
+<p><span class="math display">\displaystyle \sqrt{(x - \frac{p}{2})^2 + y^2} = \sqrt{(x + \frac{p}{2})^2}~\vert\uparrow {}^2</span></p>
+<p><span class="math display">\displaystyle (x - \frac{p}{2})^2 + y^2 = (x + \frac{p}{2})^2</span></p>
+<p><span class="math inline">y^2 = 2xp</span> — каноническое уравнение.</p>
+<p>Параметр <span class="math inline">p</span> — параболический параметр.</p>
+<p><strong>Эксцентриситет</strong></p>
+<p><span class="math inline">\varepsilon = \dfrac{r}{d}</span></p>
+<h2 id="общее-уравнение-кривых-2-го-порядка.-сведение-к-каноническим-уравнениям-эллипса-и-гиперболы-центральные-кривые.">17. Общее уравнение кривых 2-го порядка. Сведение к каноническим уравнениям эллипса и гиперболы (центральные кривые).</h2>
+<p><span class="math inline">Ax^2 + Bxy + Cy^2 +Dx+Ey+F=0</span> — общее уравнение кривых второго порядка.</p>
+<p><strong>Def</strong> Центральная кривая — кривая, имеющая один центр (эллипс, гипербола)</p>
+<ul>
+<li>Сдвиг</li>
+</ul>
+<p><span class="math inline">\begin{cases} x = x&#39; + x_0 \\ y = y&#39; + y_0 \end{cases}~~~~~~~</span>будем искать точку <span class="math inline">(x_0, y_0)</span> так, чтобы упростить исходное выражение</p>
+<p><span class="math inline">A(x&#39; + x_0)^2 + B(x&#39; + x_0)(y&#39; + y_0) + C(y&#39; + y_0)^2 +D(x&#39; + x_0)+E(y&#39; + y_0)+F=0</span></p>
+<p>Сгруппируем слагаемые с <span class="math inline">x&#39;</span> и <span class="math inline">y&#39;</span> первой степени</p>
+<p>При <span class="math inline">x&#39;</span>:</p>
+<p><span class="math inline">2Ax_0 + By_0 + D = 0</span></p>
+<p>При <span class="math inline">y&#39;</span>:</p>
+<p><span class="math inline">Bx_0 + 2Cy_0 + E = 0</span></p>
+<p><span class="math inline">\begin{cases} 2Ax_0 + By_0 = -D \\ Bx_0 + 2Cy_0 = -E \end{cases}~~~~~~~</span>задача найти <span class="math inline">x_0, y_0</span></p>
+<p><span class="math inline">\Delta = \begin{vmatrix}2A &amp; B \\ B &amp; 2C \end{vmatrix} = 4AC - B^2</span></p>
+<p>Для центральных кривых <span class="math inline">\Delta \neq 0</span></p>
+<p>Координаты начала отсчета в новой системе: <span class="math inline">(x_0, y_0)</span></p>
+<ul>
+<li>Поворот</li>
+</ul>
+<p>Найдем угол <span class="math inline">\alpha</span>, на который надо повернуть оси координат, чтобы упростить уравнение:</p>
+<p><span class="math inline">\begin{cases} x&#39; = X \cos \alpha - Y \sin \alpha \\ y&#39; = X \sin \alpha + Y \cos \alpha \end{cases}</span></p>
+<p>Переобозначим</p>
+<p><span class="math inline">A{x&#39;}^2 +Bx&#39;y&#39;+C{y&#39;}^2 +G = 0</span></p>
+<p>Подставим</p>
+<p><span class="math inline">A(X \cos \alpha - Y \sin \alpha)^2+B(X \cos \alpha - Y \sin \alpha)(X \sin \alpha + Y \cos \alpha)+C(X \sin \alpha + Y \cos \alpha)^2+G = 0</span></p>
+<p>Выберем <span class="math inline">\alpha</span> так, чтобы сумма слагаемых с <span class="math inline">XY</span> <span class="math inline">=0</span>:</p>
+<p><span class="math inline">-2A \cos \alpha \sin \alpha - B \sin^2 \alpha + B \cos ^2 \alpha + 2C \cos \alpha \sin \alpha = 0</span></p>
+<p><span class="math inline">-A \sin 2\alpha + B \cos 2\alpha + C \sin 2\alpha = 0</span></p>
+<p><span class="math inline">(C-A)\sin 2\alpha + B \cos 2\alpha = 0</span></p>
+<p>Решая относительно <span class="math inline">\alpha</span> находим угол поворота, позволяющий свести уравнение к следующему виду (после переобозначения) <span class="math inline">\beta X^2 + \gamma Y^2 + \delta = 0</span></p>
+<h2 id="общее-уравнение-кривых-2-го-порядка.-сведение-к-каноническому-уравнению-параболы-нецентральные-кривые.">18. Общее уравнение кривых 2-го порядка. Сведение к каноническому уравнению параболы (нецентральные кривые).</h2>
+<p><span class="math inline">Ax^2 + Bxy + Cy^2 +Dx+Ey+F=0</span> — общее уравнение кривых второго порядка.</p>
+<p><strong>Def</strong> Нецентральная кривая — кривая, не имеющая центра (парабола)</p>
+<ul>
+<li>Сдвиг</li>
+</ul>
+<p><span class="math inline">\begin{cases} x = x&#39; + x_0 \\ y = y&#39; + y_0 \end{cases}~~~~~~~</span>будем искать точку <span class="math inline">(x_0, y_0)</span> так, чтобы упростить исходное выражение</p>
+<p><span class="math inline">A(x&#39; + x_0)^2 + B(x&#39; + x_0)(y&#39; + y_0) + C(y&#39; + y_0)^2 +D(x&#39; + x_0)+E(y&#39; + y_0)+F=0</span></p>
+<p>Сгруппируем слагаемые с <span class="math inline">x&#39;</span> и <span class="math inline">y&#39;</span> первой степени</p>
+<p>При <span class="math inline">x&#39;</span>:</p>
+<p><span class="math inline">2Ax_0 + By_0 + D = 0</span></p>
+<p>При <span class="math inline">y&#39;</span>:</p>
+<p><span class="math inline">Bx_0 + 2Cy_0 + E = 0</span></p>
+<p><span class="math inline">\begin{cases} 2Ax_0 + By_0 = -D \\ Bx_0 + 2Cy_0 = -E \end{cases}~~~~~~~</span>задача найти <span class="math inline">x_0, y_0</span></p>
+<p><span class="math inline">\Delta = \begin{vmatrix}2A &amp; B \\ B &amp; 2C \end{vmatrix} = 4AC - B^2</span></p>
+<p>Для центральных кривых <span class="math inline">\Delta = 0</span></p>
+<p>Координаты начала отсчета в новой системе: <span class="math inline">(x_0, y_0)</span></p>
+<ul>
+<li>Поворот</li>
+</ul>
+<p>Найдем угол <span class="math inline">\alpha</span>, на который надо повернуть оси координат, чтобы упростить уравнение:</p>
+<p><span class="math inline">\begin{cases} x&#39; = X \cos \alpha - Y \sin \alpha \\ y&#39; = X \sin \alpha + Y \cos \alpha \end{cases}</span></p>
+<p>Переобозначим</p>
+<p><span class="math inline">A{x&#39;}^2 +Bx&#39;y&#39;+C{y&#39;}^2 +G = 0</span></p>
+<p>Подставим</p>
+<p><span class="math inline">A(X \cos \alpha - Y \sin \alpha)^2+B(X \cos \alpha - Y \sin \alpha)(X \sin \alpha + Y \cos \alpha)+C(X \sin \alpha + Y \cos \alpha)^2+G = 0</span></p>
+<p>Выберем <span class="math inline">\alpha</span> так, чтобы сумма слагаемых с <span class="math inline">XY</span> <span class="math inline">=0</span>:</p>
+<p><span class="math inline">-2A \cos \alpha \sin \alpha - B \sin^2 \alpha + B \cos ^2 \alpha + 2C \cos \alpha \sin \alpha = 0</span></p>
+<p><span class="math inline">-A \sin 2\alpha + B \cos 2\alpha + C \sin 2\alpha = 0</span></p>
+<p><span class="math inline">(C-A)\sin 2\alpha + B \cos 2\alpha = 0</span></p>
+<p>Решая относительно <span class="math inline">\alpha</span> находим угол поворота, позволяющий свести уравнение к следующему виду (после переобозначения) <span class="math inline">\beta X^2 + \gamma Y^2 + \delta = 0</span></p>
+<h2 id="матрицы-определения-действия-с-матрицами.">19. Матрицы: определения, действия с матрицами.</h2>
+<p><strong>Def</strong> Матрица — таблица коэффициентов СЛАУ</p>
+<p><strong>Def</strong> Если <span class="math inline">m = n</span>, матрица называется квадратной.</p>
+<p>Для квадратной матрицы вводится понятие главной и побочной диагонали</p>
+<p><strong>Def</strong> Матрица <em>полностью</em> состоящая из нулей называется нулевой.</p>
+<p><strong>Def</strong> <span class="math inline">\begin{pmatrix}  1 &amp; 0 &amp; \cdots &amp; 0 \\  0 &amp; 1 &amp; \cdots &amp; 0 \\  \cdots &amp; {} &amp; \ddots &amp; {} \\  0 &amp; 0 &amp; \cdots &amp; 1  \end{pmatrix}</span> — единичная матрица</p>
+<p><strong>Свойства и действия</strong></p>
+<ul>
+<li><p><span class="math inline">A = B \Longleftrightarrow a_{i,j} = b_{i,j}</span></p></li>
+<li><p><span class="math inline">A + B = C: c_{i,j} = a_{i,j} + b_{i,j}</span></p>
+<ul>
+<li><p><span class="math inline">A + B = B + A</span></p></li>
+<li><p><span class="math inline">(A + B ) + C = A + (B + C)</span></p></li>
+</ul></li>
+<li><p><span class="math inline">\lambda \in R;~\lambda A = C: c_{i,j} = \lambda a_{i,j}</span></p>
+<ul>
+<li><p><span class="math inline">\lambda A = A \lambda</span></p></li>
+<li><p><span class="math inline">\lambda (A+B) = \lambda A + \lambda B</span></p></li>
+<li><p><span class="math inline">(\lambda + \mu)A = \lambda A + \mu A</span></p></li>
+<li><p><span class="math inline">(\lambda \mu) A = \lambda (\mu A)</span></p></li>
+</ul></li>
+<li><p><span class="math inline">A&#39;: A + A&#39; = \emptyset</span></p>
+<p><span class="math inline">A&#39; = -A</span></p></li>
+<li><p><span class="math inline">A \cdot B = C: c_{i,j} = \displaystyle\sum_{k=1}^n a_{i,k} \cdot b_{k, j}</span></p>
+<p><span class="math inline">A \cdot B \neq B \cdot A</span></p>
+<p><span class="math inline">\emptyset \cdot A = A \cdot \emptyset</span></p>
+<p><span class="math inline">E \cdot A = A \cdot E</span></p>
+<ul>
+<li><p><span class="math inline">(A+ B)C = AC + BC</span></p></li>
+<li><p><span class="math inline">C(A+B) = CA + CB</span></p></li>
+<li><p><span class="math inline">\lambda(AB) = (\lambda A)B</span></p></li>
+<li><p><span class="math inline">(AB)C=A(BC)</span></p></li>
+</ul></li>
+</ul>
+<h2 id="обратная-матрица.-существование-и-единственность-обратной-матрицы.">20. Обратная матрица. Существование и единственность обратной матрицы.</h2>
+<p><span class="math inline">A^{-1} = \dfrac{1}{\Delta} \begin{pmatrix} A_{1,1} &amp; A_{2,1} \\ A_{1,2} &amp; A_{2,2} \end{pmatrix}^T</span> — обратная матрица для матрицы <span class="math inline">A</span>.</p>
+<p><strong>Th</strong> Единственность обратной матрицы</p>
+<p>Если существует <span class="math inline">B: BA = E; C: AC = E \Longrightarrow B = C</span></p>
+<p><span class="math inline">\square~B = BE = B(AC) = (BA)C = C~\blacksquare</span></p>
+<p><span class="math inline">B=C=A^{-1}</span></p>
+<p>$A^{-1}A = AA^{-1} = E $</p>
+<p><strong>Th</strong> Существование обратной матрицы</p>
+<p>Если <span class="math inline">|A| \neq 0 \Longleftrightarrow \exists A^{-1}</span></p>
+<p><span class="math inline">\square~\Longleftarrow</span> Дано: <span class="math inline">\exists A^{-1}~? \Longrightarrow |A| \neq 0</span></p>
+<p><span class="math inline">\exists A^{-1}: AA^{-1} = E</span>, по свойству определителя: <span class="math inline">|AA^{-1}| = |A||A^{-1}| = |E| = 1</span>, тогда ни один из определителей слева не равен нулю.</p>
+<p><span class="math inline">\Longrightarrow</span> Дано: <span class="math inline">|A| \neq 0~? \Longrightarrow \exists A^{-1}</span></p>
+<p>Будем доказывать на примере матрицы 2х2:</p>
+<p><span class="math inline">A = \begin{pmatrix} a_{1,1} &amp; a_{1,2} \\ a_{2,1} &amp; a_{2,2} \end{pmatrix}</span></p>
+<p>Составим <span class="math inline">B = \begin{pmatrix} \frac{A_{1,1}}{\Delta} &amp; \frac{A_{2,1}}{\Delta} \\ \frac{A_{1,2}}{\Delta} &amp; \frac{A_{2,2}}{\Delta} \end{pmatrix}</span>, где <span class="math inline">A_{i,j}</span> — алгебраическое дополнение.</p>
+<p><span class="math inline">\Delta = |A| \neq 0</span></p>
+<p>Убедимся, что <span class="math inline">B = A^{-1}</span>:</p>
+<p><span class="math inline">AB = \dfrac{1}{\Delta} \begin{pmatrix} a_{1,1} &amp; a_{1,2} \\ a_{2,1} &amp; a_{2,2} \end{pmatrix} \begin{pmatrix} a_{2,2} &amp; -a_{1,2} \\ -a_{2,1} &amp; a_{1,1} \end{pmatrix} = \dfrac{1}{\Delta} \begin{pmatrix} a_{1,1} a_{2,2} - a_{2,1} a_{1,2} &amp; a_{1,1} a_{1,2} - a_{1,1} a_{1,2} \\ a_{2,1} a_{2,2} - a_{2,1} a_{2,2} &amp; a_{1,1} a_{2,2} - a_{2,1} a_{1,2} \end{pmatrix} = \dfrac{1}{\Delta} \begin{pmatrix} \Delta &amp; 0 \\ 0 &amp; \Delta \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}~ \blacksquare</span></p>
+<h2 id="элементарные-преобразования-матриц.-ранг-матрицы.">21. Элементарные преобразования матриц. Ранг матрицы.</h2>
+<p><span class="math inline">\sphericalangle</span> произвольную матрицу <span class="math inline">A = \begin{pmatrix} a_{1,1} &amp; \cdots &amp; a_{1,n} \\ a_{2,1} &amp; \cdots &amp; a_{2,n} \end{pmatrix}</span>. В ней можно выделить квадратные матрицы и вычислить их определители. Выберем из найденных определителей ненулевой наивысшего порядка.</p>
+<p><strong>Def</strong> Ранг матрицы — наивысший порядок ненулевого минора матрицы.</p>
+<p><strong>Def</strong> Элементарные преобразования — преобразования строк и столбцов матрицы, не меняющие ее ранга.</p>
+<p><strong>Def</strong> Матрицы, получаемые элементарными преобразованиями называются эквивалентными.</p>
+<p>Элементарными преобразованиями любую матрицу можно свести к виду, когда в гланой диагонали находятся все <span class="math inline">&quot;1&quot;</span>, а все остальные места занимают <span class="math inline">&quot;0&quot;</span>. Этот вид называется каноническим. Для квадратной невырожденной матрицы канонической будет <span class="math inline">E</span> матрица.</p>
+<p>Приведение к каноническому виду — один из способов определения вырожденности.</p>
+<p>Если определитель матрицы не равен нулю, ранг матрицы равен ее размерности.</p>
+<h2 id="системы-линейных-уравнений-определения-матричный-вид.-теорема-кронекера-капелли.">22. Системы линейных уравнений: определения, матричный вид. Теорема Кронекера-Капелли.</h2>
+<p><strong>Def</strong> СЛАУ называется совместной, если имеет решение.</p>
+<p><strong>Def</strong> Слау называется определенной, если имеет 1 решение.</p>
+<p><strong>Th</strong></p>
+<p><span class="math inline">\begin{cases} a_{1,1} x_1 + a_{1,2} x_2 + \cdots + a_{1,n} x_n = b_1 \\ a_{2,1} x_1 + a_{2,2} x_2 + \cdots + a_{2,n} x_n = b_2 \\ \cdots \\ a_{m,1} x_1 + a_{m,2} x_2 + \cdots + a_{m,n} x_n = b_m \end{cases}</span></p>
+<p>Тогда</p>
+<p><span class="math inline">A|B = \left( \!\!\! \begin{array}{rccl|c}  a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,n} &amp; b_{1} \\  a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,n} &amp; b_{2} \\  \cdots &amp; {} &amp; {} &amp; {} &amp; {} \\  a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,n} &amp; b_{m} \end{array}\!\!\! \right)</span></p>
+<p>Если <span class="math inline">rang~A = rang~ \tilde{A} \Longleftrightarrow \exists</span> решения.</p>
+<p><span class="math inline">rang~A = rang~ \tilde{A}= n \Longleftrightarrow \exists !</span> решение.</p>
+<p><span class="math inline">\square</span> Запишем систему</p>
+<p><span class="math inline">X_1 \begin{pmatrix} a_{1,1} \\ a_{2,1} \\ \cdots \\ a_{m,1} \end{pmatrix} + X_2 \begin{pmatrix} a_{1,2} \\ a_{2,2} \\ \cdots \\ a_{m,2} \end{pmatrix} + \cdots + X_n \begin{pmatrix} a_{1,n} \\ a_{2,n} \\ \cdots \\ a_{m,n} \end{pmatrix} = \begin{pmatrix} b_{1} \\ b_{2} \\ \cdots \\ b_{m} \end{pmatrix}</span></p>
+<p>Обозначим <span class="math inline">A^1, A^2, \cdots, A^n</span> — столбцы основной матрицы.</p>
+<p><span class="math inline">\longrightarrow</span> Если <span class="math inline">rang~A = rang~ \tilde A \Longrightarrow \exists</span> решение.</p>
+<p>Пусть <span class="math inline">rang~A=rang~ \tilde A = r</span></p>
+<p>Согласно одному из определений ранга, это количество линейно независимых столбцов матрицы. <span class="math inline">A</span> содержит <span class="math inline">r</span> линейно независимых столбцов, так же как и <span class="math inline">\tilde A \Longrightarrow</span> столбец <span class="math inline">B</span> не входит в набор линейно независимых, а это значит, что он может быть выражен как линейная комбинация линейно независимых (базисных) столбцов матрицы <span class="math inline">A</span>, то есть <span class="math inline">\exists</span> такие числа <span class="math inline">(c_1, c_2, \cdots, c_n): B = c_1 A^1 + c_2 A^2 + \cdots + c_n A^n</span>, то есть <span class="math inline">\exists</span> решение СЛАУ <span class="math inline">\begin{pmatrix} c_1 \\ c_2 \\ \cdots \\ c_n \end{pmatrix} = \begin{pmatrix} x_1 \\ x_2 \\ \cdots \\ x_n \end{pmatrix}</span></p>
+<p><span class="math inline">\longleftarrow</span>: <span class="math inline">\exists</span> решение <span class="math inline">\Longrightarrow rang~A=rang~ \tilde A</span></p>
+<p><span class="math inline">\exists</span> числа <span class="math inline">(c_1, c_2, \cdots, c_n)</span> — решение СЛАУ: <span class="math inline">c_1 A^1 + c_2 A^2 + \cdots + c_n A^n = B</span> — верно.</p>
+<p>Пусть <span class="math inline">rang~A = r</span>, так как <span class="math inline">B</span> выражен линейной комбинацией векторов <span class="math inline">(A^1, A^2, \cdots, A^n) \Longrightarrow</span> <span class="math inline">B</span> — линейно зависим по отношению к системе векторов <span class="math inline">A</span>. Значит <span class="math inline">\tilde A</span> имеет то же количество линейно независимых векторов, что и <span class="math inline">A</span> <span class="math inline">\Longrightarrow</span> <span class="math inline">rang~A = rang~ \tilde A = r</span> <span class="math inline">\blacksquare</span></p>
+<h2 id="системы-линейных-уравнений-однородные-и-неоднородные-системы.-линейный-оператор-и-его-свойства.">23. Системы линейных уравнений: однородные и неоднородные системы. Линейный оператор и его свойства.</h2>
+<p><strong>Def</strong></p>
+<ul>
+<li><p><span class="math inline">AX = B; B \neq \emptyset</span> — неоднородная СЛАУ</p></li>
+<li><p><span class="math inline">AX = B; B = \emptyset</span> — однородная СЛАУ</p></li>
+</ul>
+<p><strong>Def</strong> Правило <span class="math inline">L</span>, по которому элементу <span class="math inline">x</span> сопоставляется элемент из того же пространства и которое подчиняется свойствам линейности:</p>
+<p><span class="math inline">\begin{cases} L (x_1+x_2) = L(x_1) + L(x_2) \\ L ( \lambda x) = \lambda L(x) \end{cases}</span></p>
+<p>называется линейным оператором.</p>
+<p>В решении СЛАУ применение линейного оператора равносильно умножению <span class="math inline">A</span> на вектор <span class="math inline">X</span></p>
+<p><strong>Th1</strong> Пусть <span class="math inline">X_1</span>, <span class="math inline">X_2</span> — решения однородной СЛАУ. Тогда <span class="math inline">Z = c_1 X_1 + c_2 X_2</span>, где <span class="math inline">c_1</span>, <span class="math inline">c_2</span> — произвольные числа, <span class="math inline">Z</span> — решение однородной СЛАУ</p>
+<p><span class="math inline">\square</span> <span class="math inline">X_1</span>, <span class="math inline">X_2</span> — решения <span class="math inline">\Longrightarrow</span> <span class="math inline">L[X_1] = \emptyset, L[X_2] = \emptyset</span></p>
+<p><span class="math inline">L[Z] = L[c_1 X_1 + c_2 X_2] = c_1 L[X_1] + c_2 L[X_2] = \emptyset</span> <span class="math inline">\blacksquare</span></p>
+<p><strong>Th</strong> Пусть <span class="math inline">Z</span> — решение однородной СЛАУ (<span class="math inline">AZ = 0</span>) и <span class="math inline">X^*</span> — частное решение неоднородной СЛАУ (<span class="math inline">AX^* = B</span>), тогда <span class="math inline">X = Z+X^*</span> — частное решение неоднородной СЛАУ.</p>
+<p><span class="math inline">L[X] = L[Z+X^*] = L[Z] + L[X^*] = B</span></p>
+<h2 id="системы-линейных-уравнений-однородные-и-неоднородные-системы.-структура-общего-решения.-фундаментальная-система-решений.">24. Системы линейных уравнений: однородные и неоднородные системы. Структура общего решения. Фундаментальная система решений.</h2>
+<p><strong>Def</strong></p>
+<ul>
+<li><p><span class="math inline">AX = B; B \neq \emptyset</span> — неоднородная СЛАУ</p></li>
+<li><p><span class="math inline">AX = B; B = \emptyset</span> — однородная СЛАУ</p></li>
+</ul>
+<p><strong>Def</strong></p>
+<p><span class="math inline">AX = \emptyset</span></p>
+<p><span class="math inline">\{ X_1, X_2, \cdots, X_n \}</span> линейно независимые решения <span class="math inline">A</span> и <span class="math inline">\forall</span> <span class="math inline">X_i = \displaystyle\sum_{j=1}^k C_j X_j;~ X_j \in \{ X_1, X_2, \cdots, X_k \}</span>, тогда <span class="math inline">\{ X_1, X_2, \cdots, X_k \}</span> — фундаментальная система решений (ФСР).</p>
+<p>ФСР — базис решений однородной СЛАУ</p>
+<p>Структура ФСР: <span class="math inline">X = X_0 + \tilde X</span> (общее решение линейной неоднородной системы состоит из общего решения однородной системы и частного решения неоднородной системы)</p>
+</body>
+</html>
